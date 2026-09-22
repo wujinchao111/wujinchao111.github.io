@@ -4,7 +4,7 @@
 const PROFILE = {
   github: "https://github.com/wujinchao111", // 例如：https://github.com/your-username
   email: "2561987072@qq.com", // 例如：your-name@example.com
-  resume: "" // 例如：./resume.pdf
+  resume: "./resume.pdf" // 例如：./resume.pdf
 };
 
 const contactLinks = {
