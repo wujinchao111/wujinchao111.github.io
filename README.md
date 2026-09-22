@@ -1,57 +1,60 @@
 # 吴金超 · 个人项目作品集
 
-纯 HTML + CSS + JavaScript，无依赖、无构建步骤；双击 `index.html` 即可预览。支持电脑和手机、截图放大、左右按键切换、Esc 关闭、手机左右滑动。
+求职方向：计算机视觉 / 深度学习 / AI 算法工程师。
 
-## 文件结构
+**[访问在线作品集](https://wujinchao111.github.io/)** · [GitHub 主页](https://github.com/wujinchao111) · [邮箱联系](mailto:2561987072@qq.com)
+
+本仓库包含个人作品集网站的前端页面，用于展示项目背景、本人承担的工作、关键技术与系统截图。
+
+## 项目一：苏盐井神安全作业 AI 智能预警系统
+
+面向化工厂区高处、吊装及受限空间等作业场景，融合视觉算法与智能设备数据，实现风险识别、告警联动与事件追溯，辅助现场安全监管。
+
+**技术栈：**海康开放平台、海康 HCNetSDK、YOLOv8、ByteTrack、OpenCV、Vue2、Flask、MySQL。
+
+**主要工作：**
+
+- 基于 Vue2、Flask 与 MySQL 开发手机端作业票绑定功能，实现作业票、人员、移动布控球及安全绳设备关联，并结合人脸拍照与比对识别进行身份核验。
+- 针对企业安全帽款式多样及现场场景差异，使用企业定制数据集，在海康开放平台训练安全帽佩戴、未按规定走斑马线及人员闯入检测算法，完成下发与现场验证。
+- 使用 YOLOv8、ByteTrack、OpenCV 等技术开发卡车分割、智能安全绳检测及吊装作业安全检测算法，部署在服务器端运行。
+- 基于海康 HCNetSDK 接收、解析超脑算法报警数据，完成报警事件入库、关联图片保存与查询追溯，并开发局域网设备音视频接入与语音对讲功能。
+- 参与数据采集、标注、模型训练、阈值调优及现场部署联调，完成视频流处理、语音告警与设备联动。
+
+## 项目二：智慧校园 AI 智能作业批改系统
+
+面向中小学纸质作业批改场景，结合 OCR 与多模态大模型，实现题目和学生答案识别、辅助判题及批改结果展示，为教师提供批改参考。
+
+**关键技术：**OCR、多模态大模型、Prompt 设计、模型 API 调用。
+
+**主要工作：**
+
+- 参与作业图像识别功能开发，结合 OCR 与多模态模型提取题目及学生答案。
+- 参与自动批改流程调试，调整提示词及结果解析逻辑，辅助完成答案判断与结果展示。
+- 整理测试样例，检查识别与批改结果，协助定位异常问题。
+
+## 网站实现
+
+采用纯 HTML、CSS 与 JavaScript，无需安装依赖或执行构建。支持电脑与手机浏览，项目按单列展示，截图支持点击放大、左右切换及键盘操作。
+
+页面使用 WebP 缩略图减少图片下载量，点击放大后加载高清原图。
 
 ```text
-index.html        页面内容、四个项目、截图路径
-style.css         配色、排版、响应式样式
-script.js         联系方式配置、截图查看交互
+index.html              个人介绍、两个项目及图片路径
+style.css               页面样式与响应式布局
+script.js               联系方式配置与截图交互
 images/
-  placeholder.svg 缺少截图时显示的占位图
-resume.pdf        请自行添加真实简历
+  placeholder.svg       图片缺失时的占位图
+  xiangmu1-1.jpg         项目一高清原图（另有 -2、-3）
+  xiangmu1-1-thumb.webp  项目一缩略图（另有 -2、-3）
+  xiangmu2-1.jpg         项目二高清原图（另有 -2、-3）
+  xiangmu2-1-thumb.webp  项目二缩略图（另有 -2、-3）
 ```
 
-## 发布前补充真实内容
+## 本地预览与维护
 
-1. 在 `index.html` 中修改个人介绍和四个项目的简介。当前简介仅根据项目名称概括，需按真实经历核对。
-2. 将四处“待补充本人负责的模块、实现方法与验证结果。”替换为本人实际工作。可按“负责模块 → 实现方法 → 可验证结果”组织；不要使用未经验证的数据。
-3. 项目一已填写给定技术栈；项目二至四未提供技术栈，请替换对应 `<ul class="tags">` 中的“技术栈待补充”。
-4. 在 `script.js` 顶部填写 `PROFILE` 的 `github`、`email`、`resume`。未配置时按钮保持禁用，避免跳到错误页面。填写后自动启用。
-
-```javascript
-const PROFILE = {
-  github: "https://github.com/your-username",
-  email: "your-name@example.com",
-  resume: "./resume.pdf"
-};
-```
-
-把真实 PDF 简历放到与 `index.html` 相同的目录，并命名为 `resume.pdf`。移动端浏览器可能优先预览 PDF，可从预览菜单保存。请勿仅填写路径而不上传文件。
-
-## 添加截图
-
-每个项目预留三张图片，全部从 `images/` 读取。将图片按下列名称放入该文件夹即可自动显示。当前没有真实截图，页面会显示明确标注“截图待补充”的占位图。
-
-| 项目 | 图片文件名（位于 images 文件夹） |
-| --- | --- |
-| 化工厂 AI 安全预警 | `chemical-safety-1.jpg`、`chemical-safety-2.jpg`、`chemical-safety-3.jpg` |
-| 移动安全绳身份绑定 | `safety-rope-1.jpg`、`safety-rope-2.jpg`、`safety-rope-3.jpg` |
-| 吊装作业入侵检测 | `lifting-intrusion-1.jpg`、`lifting-intrusion-2.jpg`、`lifting-intrusion-3.jpg` |
-| 遮挡行人重识别 | `occluded-reid-1.jpg`、`occluded-reid-2.jpg`、`occluded-reid-3.jpg` |
-
-可使用 PNG、WebP 等格式，但需要同时修改对应按钮的 `data-full` 和图片的 `src`。修改 `data-caption`、`alt`、`aria-label` 和 `.shot-caption` 中的文字以匹配实际图片。缩略图会裁切显示，弹窗保留完整图片。建议截图宽度不少于 1200 像素并适当压缩。
-
-增加图片：复制同一 `.gallery` 内的一个 `<button class="shot">...</button>`，修改路径与说明；图片计数会自动更新。没有第三张截图时可以删除对应按钮。
-
-## 部署到 GitHub Pages
-
-1. 将 `index.html`、`style.css`、`script.js`、整个 `images` 文件夹和真实 `resume.pdf` 上传到 GitHub 仓库根目录。不要把整个 `outputs` 目录作为根目录上传。
-2. 在仓库的 **Settings → Pages** 中选择从分支部署（Deploy from a branch）。
-3. 选择保存上述文件的分支（例如 `main`），目录选择 **/(root)**，保存。
-4. 等待 GitHub 完成部署，通过 Pages 页面提供的网址访问。
-
-所有站内资源都使用相对路径，兼容 `https://用户名.github.io/仓库名/` 形式的项目站点。文件名区分大小写。无需 npm、后端服务或第三方 CDN。
-
-如果仓库已有自己的发布流程，请沿用已有配置；本交付仅包含可部署源文件，尚未替你发布到 GitHub。
+- **预览：**使用浏览器打开 `index.html`。
+- **修改内容：**编辑 `index.html` 中的个人介绍、项目简介、职责及技术标签。
+- **更换截图：**同时更新 `images/` 中的高清原图与对应 WebP 缩略图。只替换原图不会自动更新缩略图；需要重新生成缩略图。如果更改文件名，请同步修改 `index.html` 中的 `src`（缩略图）与 `data-full`（高清原图）。
+- **配置联系方式：**编辑 `script.js` 顶部 `PROFILE` 中的 `github`、`email`、`resume`。
+- **添加简历：**将 PDF 简历放在与 `index.html` 同级的目录，例如 `resume.pdf`，并将 `PROFILE.resume` 设置为 `./resume.pdf`。
+- **更新线上网站：**将修改后的文件上传至仓库相同路径并提交，保留 `images/` 目录结构及高清原图；网站发布完成后刷新查看。本地修改不会自动同步到 GitHub。
