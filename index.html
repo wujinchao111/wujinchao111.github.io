@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="吴金超的计算机视觉与深度学习个人项目作品集，涵盖工业安全预警与智慧校园 AI 智能作业批改。">
+  <meta name="theme-color" content="#245cdd">
+  <title>吴金超 | 计算机视觉 · AI 算法作品集</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%23152439'/%3E%3Ctext x='20' y='26' text-anchor='middle' font-family='Arial' font-weight='700' font-size='17' fill='white'%3EW%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#projects">跳转到项目作品</a>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="主导航">
+      <a class="brand" href="#about" aria-label="吴金超，返回个人介绍"><span class="brand-mark"
+          aria-hidden="true">WJ</span><span>吴金超</span></a>
+      <div class="nav-links"><a href="#about">关于我</a><a href="#projects">项目作品</a><a href="#contact">联系我</a></div>
+    </nav>
+  </header>
+  <noscript>
+    <p class="noscript">启用 JavaScript 后可放大截图及使用联系按钮，项目文字仍可正常阅读。</p>
+  </noscript>
+  <main>
+    <section class="hero wrap" id="about" aria-labelledby="name">
+      <div class="hero-copy">
+        <p class="eyebrow">COMPUTER VISION / PORTFOLIO</p>
+        <h1 id="name">吴金超<span class="name-en" lang="en">WU JINCHAO</span></h1>
+        <p class="role">计算机视觉 / 深度学习 / AI算法工程师</p>
+        <p class="intro">关注计算机视觉与深度学习，项目方向涵盖工业场景安全预警与智慧校园 AI 智能作业批改。希望将算法研究与实际应用相结合，持续探索视觉模型在真实场景中的应用。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">查看项目作品 <span class="arrow"
+              aria-hidden="true">↗</span></a><a class="button" href="#contact">联系我</a></div>
+      </div>
+      <aside class="focus-panel" aria-label="项目关注方向">
+        <div class="panel-top"><span>RESEARCH &amp; PRACTICE</span><span class="crosshair" aria-hidden="true"></span>
+        </div>
+        <div class="cv-type" aria-hidden="true">CV.</div>
+        <p class="panel-label">从视觉感知，到场景应用</p>
+        <div class="focus-row"><span>工业安全 · 目标检测</span><span>DETECTION</span></div>
+        <div class="focus-row"><span>人员跟踪 · 身份绑定</span><span>TRACKING</span></div>
+        <div class="focus-row"><span>智慧教育 · 智能批改</span><span>OCR / AGENT</span></div>
+      </aside>
+    </section>
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">SELECTED PROJECTS / 01 — 02</p>
+            <h2 id="projects-title">项目作品</h2>
+          </div>
+          <p>工程实践与算法研究</p>
+        </div>
+        <div class="project-grid">
+
+          <article class="project-card" id="project-01" aria-labelledby="project-title-01">
+            <div class="project-top"><span class="project-number">PROJECT / 01</span><span
+                class="category">工业视觉应用</span></div>
+            <h3 id="project-title-01">苏盐井神安全作业 AI 智能预警系统</h3>
+            <p class="project-description">
+              基于海康超脑、摄像头以及移动布控球来开发化工厂区智能安全监管系统，实现安全绳、安全帽佩戴监管、斑马线检测测、危险区域入侵检测、吊装作业风险预警以及作业票绑定管理。结合Flask+Vue+MySQL实现算法与业务平台联动，完成AI事件识别、报警记录、截图存储及语音告警闭环。
+            </p>
+            <div class="responsibility">
+              <h4>本人负责</h4>
+              <p>•参与智能安全绳设备前期调研与方案选型，涉及主控板、4G 模块、压力开关、人体红外传感器开关以及电源模块；完成 MQTT 状态数据接入与监管平台联调。
+                •负责手机端作业票绑定功能开发，基于 Vue2 + Flask + MySQL 实现作业票、作业人员、移动布控球及安全绳设备的关联管理，并结合人脸识别完成作业人员身份核验。
+                •负责安全帽、未走斑马线等安全行为识别功能开发与优化，结合海康超脑智能分析、ROI区域规则及置信度阈值过滤，针对现场误报数据进行分析与模型优化。
+                •开发危险区域人员闯入检测算法，基于 YOLO目标检测 + ByteTrack多目标跟踪 + ROI区域判定 + 时序状态机，实现人员持续跟踪、区域入侵确认及误报警过滤。
+                •负责吊装作业安全检测算法开发，利用 YOLO人员检测、目标跟踪及自定义危险区域ROI，实时判断人员进入吊装禁区并联动报警、截图及事件记录。
+                •开发移动布控球高处作业安全绳监管算法，通过 YOLO人员检测 + ByteTrack跟踪 + 人脸身份识别 + 智能安全绳状态进行多源信息融合，实现“人员—作业票—安全绳—摄像头”关联及异常自动预警。
+                •参与工业现场数据采集、标注、模型训练、阈值调优及部署联调，并完成视频流处理、报警事件写库、语音告警及现场设备联动，提升复杂作业场景下算法的稳定性与实用性。</p>
+            </div>
+            <p class="stack-title">技术栈</p>
+            <ul class="tags" aria-label="苏盐井神安全作业 AI 智能预警系统技术栈">
+              <li>YOLOv8</li>
+              <li>ByteTrack</li>
+              <li>OpenCV</li>
+              <li>Flask</li>
+              <li>Vue2</li>
+              <li>MySQL</li>
+            </ul>
+            <div class="gallery" aria-label="苏盐井神安全作业 AI 智能预警系统项目截图">
+              <button class="shot" type="button" data-full="./images/xiangmu1-1.jpg" data-caption="系统概览"
+                aria-label="放大查看：苏盐井神安全作业 AI 智能预警系统 — 系统概览">
+                <img src="./images/xiangmu1-1.jpg" alt="苏盐井神安全作业 AI 智能预警系统— 系统概览" width="640" height="480"
+                  loading="lazy" decoding="async">
+                <span class="shot-caption"><span>系统概览</span><span aria-hidden="true">↗</span></span>
+              </button>
+              <button class="shot" type="button" data-full="./images/xiangmu1-2.jpg" data-caption="系统后台"
+                aria-label="放大查看：苏盐井神安全作业 AI 智能预警系统 — 系统后台">
+                <img src="./images/xiangmu1-2.jpg" alt="苏盐井神安全作业 AI 智能预警系统 — 系统后台" width="640" height="480"
+                  loading="lazy" decoding="async">
+                <span class="shot-caption"><span>系统后台</span><span aria-hidden="true">↗</span></span>
+              </button>
+              <button class="shot" type="button" data-full="./images/xiangmu1-3.jpg" data-caption="手机端作业票绑定界面"
+                aria-label="放大查看：苏盐井神安全作业 AI 智能预警系统 — 手机端作业票绑定界面">
+                <img src="./images/xiangmu1-3.jpg" alt="苏盐井神安全作业 AI 智能预警系统 — 手机端作业票绑定界面" width="640" height="480"
+                  loading="lazy" decoding="async">
+                <span class="shot-caption"><span>手机端作业票绑定界面</span><span aria-hidden="true">↗</span></span>
+              </button>
+            </div>
+            <p class="gallery-note">点击图片放大查看</p>
+          </article>
+
+          <article class="project-card" id="project-02" aria-labelledby="project-title-02">
+            <div class="project-top"><span class="project-number">PROJECT / 02</span><span
+                class="category">智慧教育应用</span></div>
+            <h3 id="project-title-02">智慧校园 AI 智能作业批改系统</h3>
+            <p class="project-description">
+              面向中小学纸质作业自动批改场景，融合 OCR、多模态大模型、知识检索与智能体决策，实现从试卷图像识别、题目解析、答案判定到错因分析和学情反馈的自动化处理，降低人工批改与复核成本。
+            </p>
+            <div class="responsibility">
+              <h4>本人负责</h4>
+              <p>• 参与设计多学科智能批改流程，基于 SubjectRouter 对数学、语文、英语、物理等学科任务进行自动路由，并根据题型选择不同解析与判题策略。</p>
+              <p>• 结合 OCR 与多模态视觉模型完成试卷版面解析、题目切分、公式识别及手写答案提取，并通过置信度判断触发视觉二次复核。</p>
+              <p>• 构建 Agent 工具调用机制，针对计算类题目调用 AST 白名单计算工具，并结合题型、OCR 结果及模型置信度动态选择处理路径。</p>
+              <p>• 引入 RAG 知识检索，融合教材知识点、标准答案和评分规则，通过 Top-K 检索辅助大模型完成答案判定、错因解释及知识点关联。</p>
+              <p>• 设计结果一致性检查、异常回退及 AgentTrace 链路追踪机制，记录模型判断、工具调用、知识召回、置信度与异常信息，提高批改结果的可解释性和系统稳定性。</p>
+            </div>
+            <p class="stack-title">技术栈</p>
+            <ul class="tags" aria-label="智慧校园 AI 智能作业批改系统技术栈">
+              <li>OCR</li>
+              <li>多模态大模型</li>
+              <li>SubjectRouter</li>
+              <li>Agent</li>
+              <li>RAG / Top-K 检索</li>
+              <li>AST 白名单计算</li>
+              <li>AgentTrace</li>
+            </ul>
+            <!-- 将第二个项目截图放入 images 文件夹，按下列文件名保存。 -->
+            <div class="gallery" aria-label="智慧校园 AI 智能作业批改系统项目截图">
+              <button class="shot" type="button" data-full="./images/xiangmu2-1.jpg" data-caption="系统概览"
+                aria-label="放大查看：智慧校园 AI 智能作业批改系统 — 系统概览">
+                <img src="./images/xiangmu2-1.jpg" alt="智慧校园 AI 智能作业批改系统 — 系统概览" width="640" height="480"
+                  loading="lazy" decoding="async">
+                <span class="shot-caption"><span>系统概览</span><span aria-hidden="true">↗</span></span>
+              </button>
+              <button class="shot" type="button" data-full="./images/xiangmu2-2.jpg" data-caption="智能批改"
+                aria-label="放大查看：智慧校园 AI 智能作业批改系统 — 智能批改">
+                <img src="./images/xiangmu2-2.jpg" alt="智慧校园 AI 智能作业批改系统 — 智能批改" width="640" height="480"
+                  loading="lazy" decoding="async">
+                <span class="shot-caption"><span>智能批改</span><span aria-hidden="true">↗</span></span>
+              </button>
+              <button class="shot" type="button" data-full="./images/xiangmu2-3.jpg" data-caption="批改结果与学情反馈"
+                aria-label="放大查看：智慧校园 AI 智能作业批改系统 — 批改结果与学情反馈">
+                <img src="./images/xiangmu2-3.jpg" alt="智慧校园 AI 智能作业批改系统 — 批改结果与学情反馈" width="640" height="480"
+                  loading="lazy" decoding="async">
+                <span class="shot-caption"><span>批改结果与学情反馈</span><span aria-hidden="true">↗</span></span>
+              </button>
+            </div>
+            <p class="gallery-note">点击图片放大查看</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="contact wrap" id="contact" aria-labelledby="contact-title">
+    <div class="contact-inner">
+      <div>
+        <p class="eyebrow">LET’S CONNECT</p>
+        <h2 id="contact-title">期待与您交流</h2>
+        <p>求职方向：计算机视觉 / 深度学习 / AI算法工程师</p>
+      </div>
+      <div>
+        <div class="contact-actions" aria-label="联系方式与简历">
+          <a class="button" id="github-link" role="link" aria-disabled="true" title="GitHub 地址待补充" target="_blank"
+            rel="noopener noreferrer">GitHub <span class="contact-state" aria-hidden="true">待配置</span></a>
+          <a class="button" id="email-link" role="link" aria-disabled="true" title="邮箱待补充">邮箱 <span
+              class="contact-state" aria-hidden="true">待配置</span></a>
+          <a class="button" id="resume-link" role="link" aria-disabled="true" title="简历文件待上传"
+            download="吴金超-个人简历.pdf">简历下载 <span class="contact-state" aria-hidden="true">待上传</span></a>
+        </div>
+        <p class="contact-note" id="contact-note">联系方式与简历尚未补充。</p>
+      </div>
+    </div>
+    <div class="footer-line"><span>© <span id="year">2026</span> 吴金超</span><span>计算机视觉 · 深度学习 · 工程实践</span></div>
+  </footer>
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title" aria-describedby="lightbox-caption">
+    <div class="lightbox-head">
+      <h2 id="lightbox-title">项目截图</h2><button class="icon-button" id="lightbox-close" type="button" aria-label="关闭图片"
+        autofocus>×</button>
+    </div>
+    <img class="lightbox-image" id="lightbox-image" alt="项目截图">
+    <div class="lightbox-footer">
+      <div class="lightbox-detail" aria-live="polite">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <p class="lightbox-status" id="lightbox-status"></p>
+      </div>
+      <div class="lightbox-controls"><button class="icon-button" id="lightbox-prev" type="button"
+          aria-label="上一张截图">‹</button><span class="lightbox-count" id="lightbox-count" aria-live="polite">1 /
+          3</span><button class="icon-button" id="lightbox-next" type="button" aria-label="下一张截图">›</button></div>
+    </div>
+  </dialog>
+</body>
+
+</html>
